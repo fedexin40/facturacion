@@ -1,0 +1,34 @@
+services:
+  backend:
+    build: facturacion
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    depends_on:
+      - db
+
+  db:
+    image: library/postgres:15-alpine
+    ports:
+      - 5432:5432
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=facturacion
+      - POSTGRES_PASSWORD=facturacion
+      - POSTGRES_DB=facturacion
+  next-app:
+    build: nextjs-facturacion
+    ports:
+      - 7000:7000
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
