@@ -59,10 +59,10 @@ export default function RecoverInvoice() {
           />
         </div>
       </div >
-      <div className="flex flex-col md:flex-row gap-12 justify-center pt-20">
+      <div className="flex flex-col md:flex-row gap-5 justify-center pt-20">
         <div
           className={clsx(
-            'lg:text-base md:text-sm text-center p-5 border-2 border-zinc-700 w-64 rounded-lg hover:cursor-pointer hover:opacity-50 whitespace-nowrap',
+            'text-center p-5 border-2 border-zinc-700 w-52 rounded-lg hover:cursor-pointer hover:opacity-50',
             { 'hover:cursor-not-allowed opacity-50': isPending },
           )}
           onClick={() => getInvoice()}>
@@ -70,11 +70,11 @@ export default function RecoverInvoice() {
         </div>
         <div
           className={clsx(
-            'lg:text-base md:text-sm text-center p-5 border-2 border-zinc-700 w-64 rounded-lg hover:cursor-pointer hover:opacity-50 whitespace-nowrap',
+            'text-center p-5 border-2 border-zinc-700 w-52 rounded-lg hover:cursor-pointer hover:opacity-50',
             { 'hover:cursor-not-allowed opacity-50': isPending },
           )}
           onClick={() => router.push("/")}>
-          Regresar al Menú Principal
+          Regresar
         </div>
       </div>
     </>

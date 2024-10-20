@@ -4,7 +4,7 @@ import RecoverInvoice from "./client";
 export default function Recover() {
 
   return (
-    <div className="flex flex-col px-10 py-10 bg-zinc-700 w-full h-screen">
+    <div className="flex flex-col px-10 py-10 bg-zinc-700 w-full min-h-screen">
       <div className="self-center">
         <div className="relative h-36 w-36">
           <Image src="/logoBlanco.png"

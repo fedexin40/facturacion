@@ -7,13 +7,13 @@ export default function Facturacion() {
       <div className="self-center">
         <div className="relative h-36 w-36">
           <Image src="/logoBlanco.png"
-          alt="" fill
-          className="object-contain"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
+            alt="" fill
+            className="object-contain"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
         </div>
       </div>
       <div className="py-10 flex flex-col items-center mt-10 bg-white rounded-lg shadow-md shadow-black text-black gap-10">
-        <FacturacionClient/>
+        <FacturacionClient />
       </div>
     </div>
   );
