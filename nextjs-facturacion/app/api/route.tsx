@@ -11,7 +11,7 @@ export async function GET(req: NextRequest): Promise<Response> {
   }
 
   console.log(rfc, order_number)
-  const url = `http://backend:9000/cfdi/api/invoice?rfc=${rfc}&order_number=${order_number}`
+  const url = `http://backend:9010/cfdi/api/invoice?rfc=${rfc}&order_number=${order_number}`
   try {
     result = await fetch(
       url, {

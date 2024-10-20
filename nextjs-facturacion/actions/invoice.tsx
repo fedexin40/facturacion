@@ -24,7 +24,7 @@ export async function createInvoice(input: invoiceDetails) {
   console.log(rawFormData)
   try {
     result = await fetch(
-      'http://backend:9000/cfdi/api/invoice', {
+      'http://backend:9010/cfdi/api/invoice', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8'
@@ -66,7 +66,7 @@ export async function sendbyEmail({
   if (!email) {
     return ('Seleccione un correo electronico')
   }
-  const url = `http://backend:9000/cfdi/api/invoice?rfc=${rfc}&order_number=${order_number}&email=${email}`
+  const url = `http://backend:9010/cfdi/api/invoice?rfc=${rfc}&order_number=${order_number}&email=${email}`
   try {
     result = await fetch(url, {
     })
@@ -96,7 +96,7 @@ export async function searchInvoice({
     return ('Ingrese un número de orden')
   }
   let result
-  const url = `http://backend:9000/cfdi/api/invoice?rfc=${rfc}&order_number=${order_number}`
+  const url = `http://backend:9010/cfdi/api/invoice?rfc=${rfc}&order_number=${order_number}`
   try {
     result = await fetch(url, {
     })

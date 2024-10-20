@@ -111,11 +111,11 @@ class InvoiceListApiView(APIView):
               'Ya existe una factura asociada a ese número de orden',
               status=status.HTTP_400_BAD_REQUEST)
         # Get last folio used
-        last_invoice = Invoices.objects.latest("created_at")
+        last_invoice = Invoices.objects.all()
         if not last_invoice:
             data['folio'] = '100'
         else:
-            data['folio'] = str(last_invoice.folio + 1)
+            data['folio'] = str(last_invoice.latest().folio + 1)
         try:
           result = sign_invoice(data)
         except Exception as error:

@@ -16,6 +16,6 @@ RUN pip install poetry
 RUN poetry config virtualenvs.create false --local
 RUN poetry install
 
-EXPOSE 9000
-CMD [ "python", "./manage.py", "runserver", "0.0.0.0:9000"]
+EXPOSE 9010
+CMD [ "python", "./manage.py", "runserver", "0.0.0.0:9010"]
 

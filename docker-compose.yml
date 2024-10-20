@@ -2,7 +2,7 @@ services:
   backend:
     build: facturacion
     ports:
-      - 8000:8000
+      - 9010:9010
     restart: unless-stopped
     stdin_open: true
     tty: true
@@ -11,8 +11,6 @@ services:
 
   db:
     image: library/postgres:15-alpine
-    ports:
-      - 5432:5432
     restart: unless-stopped
     volumes:
       - postgres_data:/var/lib/postgresql/data/
