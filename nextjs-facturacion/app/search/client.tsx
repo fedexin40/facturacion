@@ -39,7 +39,7 @@ export default function RecoverInvoice() {
   return (
     <>
       <AlertDialog />
-      <div className="flex flex-col md:flex-row justify-center pt-10 gap-20">
+      <div className="flex flex-col md:flex-row justify-center pt-10 gap-10">
         <div className="flex flex-col">
           <label className="lg:text-base md:text-sm italic">RFC</label>
           <input
